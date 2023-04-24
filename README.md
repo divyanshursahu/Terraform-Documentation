@@ -36,4 +36,25 @@ https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/fea
 
 Managed Identity Doc: https://learn.microsoft.com/en-in/azure/active-directory/managed-identities-azure-resources/overview
 
+If the provider version is old and you have mentioned a new version so you might have to use:
 
+terraform init -upgrade
+
+Attributes:
+
+In terraform the attribute of resource can be exported and as you need is:
+
+azurerm_subnet ---> resource type
+name --> name of subnet
+id --> (the attribute it will fetch automatically)
+
+https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface
+
+ ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.example.id
+    private_ip_address_allocation = "Dynamic"
+  }
+}
+
+as in example above subnet id
