@@ -7,3 +7,8 @@ references:
 
 https://developer.hashicorp.com/terraform/language/values/locals
 https://spacelift.io/blog/terraform-locals
+
+
+**Meta Arguments**
+for_each
+https://kodekloud.com/blog/terraform-for_each/#
