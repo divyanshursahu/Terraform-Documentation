@@ -12,3 +12,10 @@ https://spacelift.io/blog/terraform-locals
 **Meta Arguments**
 for_each
 https://kodekloud.com/blog/terraform-for_each/#
+
+
+**Modules**
+
+So modules are basically containers that can be used to host multiple resources that can be used together.
+
+The root modules contain the resources defined within your TerraForm configuration file in the main
