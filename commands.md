@@ -8,3 +8,9 @@
     ```
     terraform -help  
     ```
+
+-  Display help options for the ```fmt``` command
+  
+    ```
+    terraform fmt -help
+    ```
