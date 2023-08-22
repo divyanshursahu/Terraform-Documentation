@@ -66,3 +66,7 @@ terraform validation --> **check**
 https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview
 
 https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview
+
+
+
+
