@@ -16,8 +16,11 @@
 This command can be used to format your configuration files and ensures it is formatted using HCL standards.
 
 - ```terraform fmt``` &mdash; This formats your terraform configuration files using the HCL Language standard.
+  
 - ```terraform fmt --recursive``` &mdash; Also format files in subdirectories
+  
 - ```terraform fmt --diff``` &mdash; displays difference between orignal configuration files and formatting changes.
+  
 - ```terraform fmt --check``` &mdash; the check flag can be used to ensure the configuration files are formatted correctly, if not the exit status will be non-zero. If files are formatted correctly, the exit status will be zero.
 
 ### Initialize Your Directory 
