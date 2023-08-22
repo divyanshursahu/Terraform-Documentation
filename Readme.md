@@ -1,5 +1,8 @@
 <img width="300" alt="terraform-logo" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Terraform_Logo.svg"> 
 
+# What is Terraform ?
+
+Terraform is an Infrastructure as Code (IaC) software tool offered by HashiCorp, that lets you provision and manage your infrastructure in the cloud (AWS, Azure, GCP, etc) and on-prem resources. It lets you define both Cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share.
 
 # Terraform Commands
 
