@@ -1,10 +1,51 @@
 <img width="300" alt="terraform-logo" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Terraform_Logo.svg"> 
 
-# What is Terraform ?
+## What is Terraform ?
 
 Terraform is an Infrastructure as Code (IaC) software tool offered by HashiCorp, that lets you provision and manage your infrastructure in the cloud (AWS, Azure, GCP, etc) and on-prem resources. It lets you define both Cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share.
 
-# Terraform Commands
+## What is IAC (Infrastructure as a Code)
+
+Infrastructure as code (IaC) is the process that allows you to manage infrastructure with configuration files rather than through a graphical user interface. IaaC allows you to build, change, and manage your infrastructure in a safe, consistent, and repeatable way by defining resource configurations that you can version, reuse, and share.
+
+## Why Terraform
+
+**1. Manage any infrastructure**
+   - You can provision infra for any cloud provider and platform available in [Terraform Registry](https://registry.terraform.io/?product_intent=terraform)
+
+**2. Track your infrastructure**
+   - Terraform generates a plan and prompts you for your approval before modifying your infrastructure.
+   - It also keeps track of your real infrastructure in a state file, which acts as a source of truth for your environment.
+   
+**3. Automate changes**
+   - Terraform configuration files are declarative, meaning that they describe the end state of your infrastructure.
+   - Terraform builds a resource graph to determine resource dependencies and creates or modifies non-dependent resources in parallel. 
+ 
+**4. Standardize configurations**
+   - Terraform supports reusable configuration components called modules that define configurable collections of infrastructure, saving time and encouraging best practices.
+   - You can use publicly available modules from the Terraform Registry, or write your own.
+     
+**5. Collaborate**
+   - Since your configuration is written in a file, you can commit it to a Version Control System (VCS) and use Terraform Cloud to efficiently manage Terraform workflows across teams.
+
+## How does Terraform work
+
+Terraform creates and manages resources on cloud platforms and other services through their application programming interfaces (APIs). Providers enable Terraform to work with virtually any platform or service with an accessible API.
+
+![image](https://github.com/divyanshursahu/Terraform-Documentation/assets/96013623/ff53ea1d-3587-42e1-ae04-615ce5242181)
+
+The core Terraform workflow consists of three stages:
+
+**Write:** You define resources, which may be across multiple cloud providers and services. 
+
+**Plan:** Terraform creates an execution plan describing the infrastructure it will create, update, or destroy based on the existing infrastructure and your configuration.
+
+**Apply:** On approval, Terraform performs the proposed operations in the correct order, respecting any resource dependencies.
+
+![image](https://github.com/divyanshursahu/Terraform-Documentation/assets/96013623/534afbe8-df89-490d-ba62-35ed01baf8c4)
+
+     
+## Terraform Commands
 
 ### Get help
 
@@ -124,3 +165,14 @@ Use the taint command to mark a resource as not fully functional. It will be del
 ### Import Existing Infrastructure into Your Terraform State
 
 ```terraform import vm1.name -i id123``` &mdash; Import a VM with id123 into the configuration defined in the configuration files under vm1.name.
+
+### lifecycle Meta-Argument
+
+The lifecycle block provides several meta-arguments to manage how Terraform creates, updates, checks and deletes resources. 
+
+lifecycle is a nested block that can appear within a resource block. The lifecycle block and its contents are meta-arguments, available for all resource blocks regardless of type.
+
+Reference: https://dev.to/pwd9000/terraform-understanding-the-lifecycle-block-4f6e
+ 
+
+The arguments available within a lifecycle block are create_before_destroy, prevent_destroy, ignore_changes, and replace_triggered_by
